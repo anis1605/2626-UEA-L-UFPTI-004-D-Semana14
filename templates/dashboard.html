@@ -4,31 +4,32 @@
 
 {% block content %}
 <div class="container py-2">
-    <!-- Banner de Bienvenida -->
+    <!-- Banner de Bienvenida Suave Pastel -->
     <div class="row mb-4">
         <div class="col-12">
-            <div class="p-4 p-md-5 rounded-4 bg-dark text-white shadow-sm position-relative overflow-hidden">
+            <div class="p-4 p-md-5 rounded-4 shadow-sm position-relative overflow-hidden" 
+                 style="background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #fdf4ff 100%); border: 1px solid var(--pastel-indigo-border);">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <div class="d-flex align-items-center mb-2">
-                            <span class="badge bg-success px-3 py-2 me-2">
+                        <div class="d-flex align-items-center flex-wrap gap-2 mb-2">
+                            <span class="badge bg-success px-3 py-2">
                                 <i class="bi bi-person-check-fill me-1"></i>Sesión Activa
                             </span>
                             <span class="badge bg-primary px-3 py-2">
                                 Rol: {{ current_user.rol|upper }}
                             </span>
                         </div>
-                        <h2 class="display-6 fw-bold mb-2">
+                        <h2 class="display-6 fw-bold mb-2 text-dark">
                             ¡Bienvenido(a), {{ current_user.nombre or current_user.usuario }}!
                         </h2>
-                        <p class="text-white-50 lead mb-3">
-                            Panel administrativo del Sistema de Gestión de Ferretería y Materiales. Administre el catálogo, los clientes, los proveedores y las facturas de manera centralizada y segura.
+                        <p class="text-secondary lead mb-3">
+                            Panel administrativo de Ferretería "El Tornillo Dorado". Gestione el inventario, clientes, distribuidores y facturación con persistencia relacional MySQL y seguridad avanzada.
                         </p>
                         <div class="d-flex flex-wrap gap-2">
                             <a href="{{ url_for('productos') }}" class="btn btn-primary fw-bold shadow-sm">
                                 <i class="bi bi-box-seam me-1"></i>Gestionar Inventario
                             </a>
-                            <a href="{{ url_for('nuevo_producto') }}" class="btn btn-outline-light">
+                            <a href="{{ url_for('nuevo_producto') }}" class="btn btn-outline-primary">
                                 <i class="bi bi-plus-circle me-1"></i>Nuevo Producto
                             </a>
                             <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">
@@ -37,134 +38,126 @@
                         </div>
                     </div>
                     <div class="col-lg-4 text-center d-none d-lg-block">
-                        <i class="bi bi-speedometer2 display-1 text-primary opacity-50"></i>
+                        <i class="bi bi-speedometer2 display-1 text-primary opacity-25"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Tarjetas de Módulos Administrativos -->
+    <!-- Tarjetas de Módulos Administrativos Pastel -->
     <div class="row g-4 mb-4">
         <!-- Productos -->
         <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm rounded-3">
-                <div class="card-body text-center p-4">
-                    <div class="d-inline-flex p-3 rounded-circle bg-primary bg-opacity-10 text-primary mb-3">
-                        <i class="bi bi-box-seam fs-2"></i>
-                    </div>
-                    <h5 class="card-title fw-bold">Productos</h5>
-                    <p class="text-muted small">Gestión de inventario, existencias, precios y relación con proveedores.</p>
-                    <div class="d-grid gap-2">
-                        <a href="{{ url_for('productos') }}" class="btn btn-sm btn-outline-primary fw-semibold">
-                            <i class="bi bi-eye me-1"></i>Ver Catálogo
-                        </a>
-                        <a href="{{ url_for('nuevo_producto') }}" class="btn btn-sm btn-primary">
-                            <i class="bi bi-plus-lg me-1"></i>Agregar Producto
-                        </a>
-                    </div>
+            <div class="card h-100 p-4 text-center metric-card-indigo shadow-sm">
+                <div class="metric-icon mx-auto mb-3">
+                    <i class="bi bi-box-seam"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Productos</h5>
+                <p class="text-muted small">Gestión de inventario, stock, precios unitarios y clave foránea de proveedores.</p>
+                <div class="d-grid gap-2 mt-auto">
+                    <a href="{{ url_for('productos') }}" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-eye me-1"></i>Ver Catálogo
+                    </a>
+                    <a href="{{ url_for('nuevo_producto') }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-lg me-1"></i>Agregar Producto
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Clientes -->
         <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm rounded-3">
-                <div class="card-body text-center p-4">
-                    <div class="d-inline-flex p-3 rounded-circle bg-success bg-opacity-10 text-success mb-3">
-                        <i class="bi bi-people fs-2"></i>
-                    </div>
-                    <h5 class="card-title fw-bold">Clientes</h5>
-                    <p class="text-muted small">Directorio de clientes frecuentes, corporativos y de ocasión con RUC/Cédula.</p>
-                    <div class="d-grid gap-2">
-                        <a href="{{ url_for('clientes') }}" class="btn btn-sm btn-outline-success fw-semibold">
-                            <i class="bi bi-eye me-1"></i>Ver Directorio
-                        </a>
-                        <a href="{{ url_for('nuevo_cliente') }}" class="btn btn-sm btn-success">
-                            <i class="bi bi-person-plus me-1"></i>Registrar Cliente
-                        </a>
-                    </div>
+            <div class="card h-100 p-4 text-center metric-card-mint shadow-sm">
+                <div class="metric-icon mx-auto mb-3">
+                    <i class="bi bi-people"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Clientes</h5>
+                <p class="text-muted small">Directorio de clientes frecuentes, corporativos y de ocasión con RUC/Cédula.</p>
+                <div class="d-grid gap-2 mt-auto">
+                    <a href="{{ url_for('clientes') }}" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-eye me-1"></i>Ver Directorio
+                    </a>
+                    <a href="{{ url_for('nuevo_cliente') }}" class="btn btn-sm btn-success">
+                        <i class="bi bi-person-plus me-1"></i>Registrar Cliente
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Proveedores -->
         <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm rounded-3">
-                <div class="card-body text-center p-4">
-                    <div class="d-inline-flex p-3 rounded-circle bg-warning bg-opacity-10 text-warning mb-3">
-                        <i class="bi bi-truck fs-2"></i>
-                    </div>
-                    <h5 class="card-title fw-bold">Proveedores</h5>
-                    <p class="text-muted small">Empresas mayoristas distribuidoras de cemento, acero, áridos y acabados.</p>
-                    <div class="d-grid gap-2">
-                        <a href="{{ url_for('proveedores') }}" class="btn btn-sm btn-outline-warning fw-semibold text-dark">
-                            <i class="bi bi-eye me-1"></i>Ver Proveedores
-                        </a>
-                        <a href="{{ url_for('nuevo_proveedor') }}" class="btn btn-sm btn-warning text-dark">
-                            <i class="bi bi-plus-lg me-1"></i>Registrar Proveedor
-                        </a>
-                    </div>
+            <div class="card h-100 p-4 text-center metric-card-amber shadow-sm">
+                <div class="metric-icon mx-auto mb-3">
+                    <i class="bi bi-truck"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Proveedores</h5>
+                <p class="text-muted small">Empresas mayoristas distribuidoras de cemento, acero, áridos y acabados.</p>
+                <div class="d-grid gap-2 mt-auto">
+                    <a href="{{ url_for('proveedores') }}" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-eye me-1"></i>Ver Proveedores
+                    </a>
+                    <a href="{{ url_for('nuevo_proveedor') }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-lg me-1"></i>Registrar Proveedor
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Facturación -->
         <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm rounded-3">
-                <div class="card-body text-center p-4">
-                    <div class="d-inline-flex p-3 rounded-circle bg-info bg-opacity-10 text-info mb-3">
-                        <i class="bi bi-receipt fs-2"></i>
-                    </div>
-                    <h5 class="card-title fw-bold">Facturación</h5>
-                    <p class="text-muted small">Emisión de facturas electrónicas con cálculo de subtotal, IVA y clave foránea.</p>
-                    <div class="d-grid gap-2">
-                        <a href="{{ url_for('facturacion') }}" class="btn btn-sm btn-outline-info fw-semibold">
-                            <i class="bi bi-eye me-1"></i>Historial de Ventas
-                        </a>
-                        <a href="{{ url_for('nueva_factura') }}" class="btn btn-sm btn-info text-white">
-                            <i class="bi bi-file-earmark-plus me-1"></i>Emitir Factura
-                        </a>
-                    </div>
+            <div class="card h-100 p-4 text-center metric-card-sky shadow-sm">
+                <div class="metric-icon mx-auto mb-3">
+                    <i class="bi bi-receipt"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Facturación</h5>
+                <p class="text-muted small">Emisión de facturas electrónicas con cálculo de subtotal, IVA y clave foránea.</p>
+                <div class="d-grid gap-2 mt-auto">
+                    <a href="{{ url_for('facturacion') }}" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-eye me-1"></i>Historial de Ventas
+                    </a>
+                    <a href="{{ url_for('nueva_factura') }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-file-earmark-plus me-1"></i>Emitir Factura
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Panel de Información de Seguridad de Sesión -->
+    <!-- Panel de Información de Seguridad de Sesión Pastel -->
     <div class="row">
         <div class="col-12">
-            <div class="card border-0 shadow-sm rounded-3">
+            <div class="card border shadow-sm rounded-4">
                 <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
                     <h6 class="fw-bold mb-0 text-dark">
                         <i class="bi bi-shield-check text-primary me-2"></i>Estado de Autenticación y Seguridad (Semana 14)
                     </h6>
-                    <span class="badge bg-light text-muted border">Flask-Login + MySQL</span>
+                    <span class="badge bg-primary">Flask-Login + MySQL</span>
                 </div>
                 <div class="card-body p-4">
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <div class="p-3 bg-light rounded-3 text-center">
+                            <div class="p-3 bg-light rounded-3 text-center border">
                                 <div class="text-muted small">Usuario Autenticado</div>
                                 <div class="fw-bold text-dark fs-5">{{ current_user.usuario }}</div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="p-3 bg-light rounded-3 text-center">
+                            <div class="p-3 bg-light rounded-3 text-center border">
                                 <div class="text-muted small">Nombre Registrado</div>
                                 <div class="fw-bold text-dark fs-5">{{ current_user.nombre or 'N/A' }}</div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="p-3 bg-light rounded-3 text-center">
+                            <div class="p-3 bg-light rounded-3 text-center border">
                                 <div class="text-muted small">Protección de Rutas</div>
                                 <div class="fw-bold text-success fs-5"><i class="bi bi-lock-fill me-1"></i>@login_required</div>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="p-3 bg-light rounded-3 text-center">
+                            <div class="p-3 bg-light rounded-3 text-center border">
                                 <div class="text-muted small">Cifrado de Contraseña</div>
-                                <div class="fw-bold text-info fs-5"><i class="bi bi-key-fill me-1"></i>Werkzeug Hash</div>
+                                <div class="fw-bold text-primary fs-5"><i class="bi bi-key-fill me-1"></i>Werkzeug scrypt</div>
                             </div>
                         </div>
                     </div>

@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferretería El Tornillo Dorado - Proyecto Integrador U4 (Semana 14)</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Estilos personalizados -->
+    <!-- Estilos personalizados Pastel UI/UX -->
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
-    <!-- Navegación principal -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <!-- Navegación principal Frosted Pastel -->
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary-emphasis" href="index.html">
-                <i class="bi bi-tools text-primary me-2"></i>FERRETERÍA EL TORNILLO DORADO
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tools"></i>
+                <span>FERRETERÍA EL TORNILLO DORADO</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
                     <li class="nav-item"><a class="nav-link active" href="#resumen"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="#auth-demo"><i class="bi bi-shield-lock-fill me-1"></i>Sistema de Login (S14)</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="#auth-demo"><i class="bi bi-shield-lock-fill me-1"></i>Sistema de Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="#crud"><i class="bi bi-database-gear me-1"></i>CRUD MySQL</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#productos"><i class="bi bi-box-seam me-1"></i>Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#clientes"><i class="bi bi-people me-1"></i>Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proveedores"><i class="bi bi-truck me-1"></i>Proveedores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#facturacion"><i class="bi bi-receipt me-1"></i>Facturación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#empresa"><i class="bi bi-building me-1"></i>Quiénes Somos</a></li>
                 </ul>
                 <div class="d-flex gap-2">
-                    <a href="https://github.com/anis1605/2626-UEA-L-UFPTI-004-D-Semana14" target="_blank" class="btn btn-outline-light btn-sm">
+                    <a href="https://github.com/anis1605/2626-UEA-L-UFPTI-004-D-Semana14" target="_blank" class="btn btn-primary btn-sm shadow-sm">
                         <i class="bi bi-github me-1"></i>Repositorio GitHub
                     </a>
                 </div>
@@ -41,25 +43,29 @@
         </div>
     </nav>
 
-    <!-- Encabezado Hero -->
-    <header class="hero-header text-center py-5 bg-dark text-white border-bottom border-primary border-3">
+    <!-- Encabezado Hero Suave -->
+    <header class="hero-header text-center">
         <div class="container">
-            <h1 class="display-5 fw-bold text-uppercase">FERRETERÍA EL TORNILLO DORADO</h1>
-            <p class="lead mb-2 text-white-50">Sistema de Gestión Web con Flask, Jinja2, Flask-WTF, Flask-Login y Base de Datos Relacional MySQL</p>
-            <span class="badge bg-primary fs-6 px-3 py-2 shadow-sm">Avance 14/16 - Implementación de un Sistema de Login Funcional</span>
+            <h1 class="display-5 fw-bold">FERRETERÍA EL TORNILLO DORADO</h1>
+            <p class="lead mb-0">Sistema de Gestión Web con Flask, Jinja2, Flask-WTF, Flask-Login y Base de Datos Relacional MySQL</p>
+            <div class="mt-2">
+                <span class="badge bg-primary">
+                    <i class="bi bi-shield-check me-1"></i>Avance 14/16 - Implementación de un Sistema de Login Funcional
+                </span>
+            </div>
         </div>
     </header>
 
     <!-- Contenido principal -->
     <main class="container my-4">
 
-        <!-- Banner Explicativo del Avance Semana 14 -->
-        <div class="card p-4 border-start border-primary border-4 shadow-sm bg-light mb-4">
+        <!-- Banner Explicativo del Avance Semana 14 en Tonos Suaves -->
+        <div class="card p-4 border-start border-primary border-4 shadow-sm mb-4" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
                 <h4 class="text-primary fw-bold mb-0">
-                    <i class="bi bi-shield-check me-2"></i>Semana 14: Sistema de Autenticación, Sesiones y Seguridad
+                    <i class="bi bi-shield-lock me-2"></i>Semana 14: Sistema de Autenticación, Sesiones y Seguridad
                 </h4>
-                <span class="badge bg-success px-3 py-2 fs-6">Flask-Login 0.6.3 + Werkzeug 3.1</span>
+                <span class="badge bg-success">Flask-Login 0.6.3 + Werkzeug 3.1</span>
             </div>
             <p class="text-secondary mb-3">
                 Este avance incorpora el ciclo de vida completo de seguridad y autenticación para el Proyecto Integrador:
@@ -70,22 +76,22 @@
             </p>
             <div class="row g-2 text-center text-md-start">
                 <div class="col-md-3">
-                    <div class="p-2 border rounded bg-white small">
+                    <div class="p-2 border rounded-3 bg-white small shadow-sm">
                         <i class="bi bi-check-circle-fill text-success me-1"></i> <strong>Tabla Usuarios:</strong> MySQL <code>usuarios</code>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="p-2 border rounded bg-white small">
-                        <i class="bi bi-check-circle-fill text-success me-1"></i> <strong>Cifrado:</strong> Hash <code>scrypt</code> (No texto plano)
+                    <div class="p-2 border rounded-3 bg-white small shadow-sm">
+                        <i class="bi bi-check-circle-fill text-success me-1"></i> <strong>Cifrado:</strong> Hash <code>scrypt</code>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="p-2 border rounded bg-white small">
+                    <div class="p-2 border rounded-3 bg-white small shadow-sm">
                         <i class="bi bi-check-circle-fill text-success me-1"></i> <strong>Protección:</strong> <code>@login_required</code> activo
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="p-2 border rounded bg-white small">
+                    <div class="p-2 border rounded-3 bg-white small shadow-sm">
                         <i class="bi bi-check-circle-fill text-success me-1"></i> <strong>Pruebas:</strong> 7/7 suites aprobadas
                     </div>
                 </div>
@@ -95,28 +101,28 @@
         <!-- Demostración Interactiva del Sistema de Login (S14) -->
         <section id="auth-demo" class="mb-5">
             <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
-                <h3 class="text-primary mb-0"><i class="bi bi-shield-lock-fill me-2"></i>Demostración del Módulo de Autenticación</h3>
-                <span class="badge bg-warning text-dark px-3 py-2">Vista Previa Frontend S14</span>
+                <h3 class="mb-0 text-dark"><i class="bi bi-shield-lock-fill text-primary me-2"></i>Demostración del Módulo de Autenticación</h3>
+                <span class="badge bg-warning">Vista Previa Frontend S14</span>
             </div>
 
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul class="nav nav-pills mb-3 gap-2" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active fw-bold" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab">
+                    <button class="btn btn-outline-primary btn-sm active fw-semibold" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab">
                         <i class="bi bi-box-arrow-in-right me-1"></i> 1. Formulario Login
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="pills-registro-tab" data-bs-toggle="pill" data-bs-target="#pills-registro" type="button" role="tab">
+                    <button class="btn btn-outline-primary btn-sm fw-semibold" id="pills-registro-tab" data-bs-toggle="pill" data-bs-target="#pills-registro" type="button" role="tab">
                         <i class="bi bi-person-plus me-1"></i> 2. Formulario Registro
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="pills-dash-tab" data-bs-toggle="pill" data-bs-target="#pills-dash" type="button" role="tab">
+                    <button class="btn btn-outline-primary btn-sm fw-semibold" id="pills-dash-tab" data-bs-toggle="pill" data-bs-target="#pills-dash" type="button" role="tab">
                         <i class="bi bi-speedometer2 me-1"></i> 3. Dashboard Protegido
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="pills-db-tab" data-bs-toggle="pill" data-bs-target="#pills-db" type="button" role="tab">
+                    <button class="btn btn-outline-primary btn-sm fw-semibold" id="pills-db-tab" data-bs-toggle="pill" data-bs-target="#pills-db" type="button" role="tab">
                         <i class="bi bi-database-check me-1"></i> 4. Tabla usuarios (MySQL)
                     </button>
                 </li>
@@ -126,35 +132,44 @@
                 <!-- Tab Login -->
                 <div class="tab-pane fade show active" id="pills-login" role="tabpanel">
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-                                <div class="card-header bg-dark text-white text-center py-3">
-                                    <h5 class="fw-bold mb-0"><i class="bi bi-shield-lock me-2 text-primary"></i>Iniciar Sesión</h5>
-                                    <small class="text-white-50">Flask-Login & Flask-WTF</small>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card shadow-md border-0 rounded-4 overflow-hidden">
+                                <div class="card-header text-center py-4 border-0" style="background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%);">
+                                    <div class="d-inline-flex p-3 rounded-circle bg-white shadow-sm text-primary mb-2">
+                                        <i class="bi bi-shield-lock-fill fs-2"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Iniciar Sesión</h4>
+                                    <small class="text-muted">Flask-Login & Flask-WTF</small>
                                 </div>
                                 <div class="card-body p-4 bg-white">
-                                    <form onsubmit="event.preventDefault(); alert('En la aplicación Flask real (local), esto ejecuta check_password_hash() y login_user() contra MySQL.');">
+                                    <form onsubmit="event.preventDefault(); alert('En la aplicación Flask local, esto ejecuta check_password_hash() y login_user() contra MySQL.');">
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Nombre de Usuario</label>
-                                            <input type="text" class="form-control" value="admin" readonly>
+                                            <label class="form-label">Nombre de Usuario</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                                <input type="text" class="form-control" value="admin" readonly>
+                                            </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Contraseña</label>
-                                            <input type="password" class="form-control" value="admin123" readonly>
+                                            <label class="form-label">Contraseña</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                                <input type="password" class="form-control" value="admin123" readonly>
+                                            </div>
                                         </div>
-                                        <div class="mb-3 form-check">
+                                        <div class="mb-4 form-check">
                                             <input type="checkbox" class="form-check-input" id="checkSim" checked>
                                             <label class="form-check-label small text-muted" for="checkSim">Mantener sesión activa</label>
                                         </div>
                                         <div class="d-grid">
-                                            <button type="submit" class="btn btn-primary fw-bold">
+                                            <button type="submit" class="btn btn-primary btn-lg fw-bold">
                                                 <i class="bi bi-box-arrow-in-right me-1"></i>Iniciar Sesión (Demo)
                                             </button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="card-footer bg-light small text-center text-muted">
-                                    Credenciales iniciales: <code>admin / admin123</code> o <code>anis / ferreteria2026</code>
+                                <div class="card-footer bg-light small text-center text-muted py-3">
+                                    Credenciales demostrativas: <code>admin / admin123</code> o <code>anis / ferreteria2026</code>
                                 </div>
                             </div>
                         </div>
@@ -164,32 +179,35 @@
                 <!-- Tab Registro -->
                 <div class="tab-pane fade" id="pills-registro" role="tabpanel">
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-                                <div class="card-header bg-dark text-white text-center py-3">
-                                    <h5 class="fw-bold mb-0"><i class="bi bi-person-plus me-2 text-success"></i>Registro de Nuevo Usuario</h5>
-                                    <small class="text-white-50">Cifrado con Werkzeug generate_password_hash</small>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card shadow-md border-0 rounded-4 overflow-hidden">
+                                <div class="card-header text-center py-4 border-0" style="background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 100%);">
+                                    <div class="d-inline-flex p-3 rounded-circle bg-white shadow-sm text-success mb-2">
+                                        <i class="bi bi-person-plus-fill fs-2"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Registro de Nuevo Usuario</h4>
+                                    <small class="text-muted">Cifrado con Werkzeug generate_password_hash</small>
                                 </div>
                                 <div class="card-body p-4 bg-white">
                                     <form onsubmit="event.preventDefault(); alert('En Flask se genera el hash scrypt antes de ejecutar INSERT INTO usuarios.');">
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Usuario (Único)</label>
+                                            <label class="form-label">Usuario (Único)</label>
                                             <input type="text" class="form-control" placeholder="Ej. claudia_admin">
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Nombre Completo</label>
+                                            <label class="form-label">Nombre Completo</label>
                                             <input type="text" class="form-control" placeholder="Ej. Claudia Patricia Morales">
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Contraseña</label>
+                                            <label class="form-label">Contraseña</label>
                                             <input type="password" class="form-control" placeholder="Mínimo 6 caracteres">
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label fw-semibold">Confirmar Contraseña</label>
+                                        <div class="mb-4">
+                                            <label class="form-label">Confirmar Contraseña</label>
                                             <input type="password" class="form-control" placeholder="Repita la contraseña">
                                         </div>
                                         <div class="d-grid">
-                                            <button type="submit" class="btn btn-success fw-bold">
+                                            <button type="submit" class="btn btn-success btn-lg fw-bold">
                                                 <i class="bi bi-person-check me-1"></i>Registrar Cuenta
                                             </button>
                                         </div>
@@ -202,13 +220,13 @@
 
                 <!-- Tab Dashboard -->
                 <div class="tab-pane fade" id="pills-dash" role="tabpanel">
-                    <div class="p-4 bg-dark text-white rounded-4 shadow-sm mb-3">
+                    <div class="p-4 p-md-5 rounded-4 shadow-sm mb-3" style="background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #fdf4ff 100%); border: 1px solid var(--pastel-indigo-border);">
                         <div class="d-flex align-items-center mb-2">
                             <span class="badge bg-success me-2 px-3 py-2"><i class="bi bi-check-circle-fill me-1"></i>Sesión Activa</span>
                             <span class="badge bg-primary px-3 py-2">Rol: ADMIN</span>
                         </div>
-                        <h3>¡Bienvenido(a), Clara Anahí González!</h3>
-                        <p class="text-white-50 mb-3">Vista previa del panel administrativo accesible únicamente para usuarios autenticados con <code>@login_required</code>.</p>
+                        <h3 class="fw-bold text-dark">¡Bienvenido(a), Clara Anahí González!</h3>
+                        <p class="text-secondary mb-3">Vista previa del panel administrativo accesible únicamente para usuarios autenticados con <code>@login_required</code>.</p>
                         <div class="d-flex gap-2">
                             <button class="btn btn-primary btn-sm"><i class="bi bi-box-seam me-1"></i>Gestionar Inventario</button>
                             <button class="btn btn-outline-danger btn-sm"><i class="bi bi-box-arrow-right me-1"></i>Cerrar Sesión (logout_user)</button>
@@ -218,14 +236,14 @@
 
                 <!-- Tab Base de Datos -->
                 <div class="tab-pane fade" id="pills-db" role="tabpanel">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-                            <span><i class="bi bi-table me-2"></i>Estructura y Registros de la Tabla <code>usuarios</code></span>
-                            <span class="badge bg-info text-dark">MySQL: ferreteria_db</span>
+                    <div class="card shadow-sm border rounded-4 overflow-hidden">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+                            <span class="fw-bold text-dark"><i class="bi bi-table text-primary me-2"></i>Estructura y Registros de la Tabla <code>usuarios</code></span>
+                            <span class="badge bg-info">MySQL: ferreteria_db</span>
                         </div>
-                        <div class="table-responsive p-3">
-                            <table class="table table-hover table-bordered align-middle mb-0">
-                                <thead class="table-light">
+                        <div class="table-responsive p-0">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Usuario</th>
@@ -260,48 +278,48 @@
         <!-- Resumen General -->
         <section id="resumen" class="mb-5">
             <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
-                <h3 class="text-primary mb-0"><i class="bi bi-speedometer2 me-2"></i>Panel de Control y Resumen (Motor MySQL: ferreteria_db)</h3>
+                <h3 class="mb-0 text-dark"><i class="bi bi-speedometer2 text-primary me-2"></i>Panel de Control y Resumen</h3>
                 <span class="badge bg-primary">Semana 14 - Activo</span>
             </div>
-            <div class="row g-3 text-center">
+            <div class="row g-3">
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 bg-primary text-white h-100 shadow-sm">
+                    <div class="card p-3 metric-card-indigo h-100 shadow-sm">
                         <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-semibold">Productos</span>
-                            <i class="bi bi-box-seam fs-4"></i>
+                            <span class="fw-semibold text-muted">Productos</span>
+                            <div class="metric-icon"><i class="bi bi-box-seam"></i></div>
                         </div>
-                        <h2 class="display-6 fw-bold">7</h2>
-                        <p class="small mb-0 text-white-50">Items en MySQL</p>
+                        <h2 class="display-6 fw-bold text-dark">7</h2>
+                        <p class="small mb-0 text-muted">Items en MySQL</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 bg-success text-white h-100 shadow-sm">
+                    <div class="card p-3 metric-card-mint h-100 shadow-sm">
                         <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-semibold">Clientes</span>
-                            <i class="bi bi-people fs-4"></i>
+                            <span class="fw-semibold text-muted">Clientes</span>
+                            <div class="metric-icon"><i class="bi bi-people"></i></div>
                         </div>
-                        <h2 class="display-6 fw-bold">4</h2>
-                        <p class="small mb-0 text-white-50">Clientes en MySQL</p>
+                        <h2 class="display-6 fw-bold text-dark">4</h2>
+                        <p class="small mb-0 text-muted">Clientes en MySQL</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 bg-warning text-dark h-100 shadow-sm">
+                    <div class="card p-3 metric-card-amber h-100 shadow-sm">
                         <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-semibold">Proveedores</span>
-                            <i class="bi bi-truck fs-4"></i>
+                            <span class="fw-semibold text-muted">Proveedores</span>
+                            <div class="metric-icon"><i class="bi bi-truck"></i></div>
                         </div>
-                        <h2 class="display-6 fw-bold">4</h2>
-                        <p class="small mb-0 text-dark-50">Distribuidores en MySQL</p>
+                        <h2 class="display-6 fw-bold text-dark">4</h2>
+                        <p class="small mb-0 text-muted">Distribuidores en MySQL</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card p-3 bg-info text-white h-100 shadow-sm">
+                    <div class="card p-3 metric-card-sky h-100 shadow-sm">
                         <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-semibold">Facturación</span>
-                            <i class="bi bi-receipt fs-4"></i>
+                            <span class="fw-semibold text-muted">Facturación</span>
+                            <div class="metric-icon"><i class="bi bi-receipt"></i></div>
                         </div>
-                        <h2 class="display-6 fw-bold">4</h2>
-                        <p class="small mb-0 text-white-50">Ventas en MySQL</p>
+                        <h2 class="display-6 fw-bold text-dark">4</h2>
+                        <p class="small mb-0 text-muted">Ventas en MySQL</p>
                     </div>
                 </div>
             </div>
@@ -310,55 +328,55 @@
         <!-- Sección de Operaciones CRUD en MySQL -->
         <section id="crud" class="mb-5">
             <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
-                <h3 class="text-primary mb-0"><i class="bi bi-database-gear me-2"></i>Operaciones CRUD Relacionales (SELECT, INSERT, UPDATE, DELETE)</h3>
+                <h3 class="mb-0 text-dark"><i class="bi bi-database-gear text-primary me-2"></i>Operaciones CRUD Relacionales</h3>
                 <span class="badge bg-success">Persistencia Real MySQL</span>
             </div>
             <div class="row g-3">
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 p-3 border-top border-primary border-3 shadow-sm">
-                        <h5 class="fw-bold text-primary"><i class="bi bi-list-check me-2"></i>1. SELECT (Listar)</h5>
-                        <p class="small text-muted mb-0">Consulta con <code>LEFT JOIN</code> para recuperar los datos cruzando con la clave foránea del proveedor.</p>
+                    <div class="card h-100 p-3 shadow-sm border-0" style="background: var(--pastel-indigo-light); border-left: 4px solid var(--pastel-indigo) !important;">
+                        <h6 class="fw-bold" style="color: var(--pastel-indigo-text);"><i class="bi bi-list-check me-1"></i>1. SELECT (Listar)</h6>
+                        <p class="small text-muted mb-0">Consulta con <code>LEFT JOIN</code> cruzando la clave foránea del proveedor.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 p-3 border-top border-success border-3 shadow-sm">
-                        <h5 class="fw-bold text-success"><i class="bi bi-plus-circle me-2"></i>2. INSERT (Agregar)</h5>
-                        <p class="small text-muted mb-0">Validación con Flask-WTF e inserción parametrizada con marcadores <code>%s</code> y <code>commit()</code>.</p>
+                    <div class="card h-100 p-3 shadow-sm border-0" style="background: var(--pastel-mint-light); border-left: 4px solid var(--pastel-mint) !important;">
+                        <h6 class="fw-bold" style="color: var(--pastel-mint-text);"><i class="bi bi-plus-circle me-1"></i>2. INSERT (Agregar)</h6>
+                        <p class="small text-muted mb-0">Validación con Flask-WTF e inserción parametrizada con <code>%s</code> y <code>commit()</code>.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 p-3 border-top border-warning border-3 shadow-sm">
-                        <h5 class="fw-bold text-warning"><i class="bi bi-pencil-square me-2"></i>3. UPDATE (Modificar)</h5>
-                        <p class="small text-muted mb-0">Actualización puntual aplicando <code>WHERE id = %s</code> garantizando la integridad de datos.</p>
+                    <div class="card h-100 p-3 shadow-sm border-0" style="background: var(--pastel-amber-light); border-left: 4px solid var(--pastel-amber) !important;">
+                        <h6 class="fw-bold" style="color: var(--pastel-amber-text);"><i class="bi bi-pencil-square me-1"></i>3. UPDATE (Modificar)</h6>
+                        <p class="small text-muted mb-0">Actualización puntual aplicando <code>WHERE id = %s</code>.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 p-3 border-top border-danger border-3 shadow-sm">
-                        <h5 class="fw-bold text-danger"><i class="bi bi-trash me-2"></i>4. DELETE (Eliminar)</h5>
-                        <p class="small text-muted mb-0">Eliminación directa mediante <code>WHERE id = %s</code> con confirmación visual interactiva.</p>
+                    <div class="card h-100 p-3 shadow-sm border-0" style="background: var(--pastel-rose-light); border-left: 4px solid var(--pastel-rose) !important;">
+                        <h6 class="fw-bold" style="color: var(--pastel-rose-text);"><i class="bi bi-trash me-1"></i>4. DELETE (Eliminar)</h6>
+                        <p class="small text-muted mb-0">Eliminación directa mediante <code>WHERE id = %s</code> con confirmación.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Información Corporativa -->
-        <section class="row g-4 mb-5">
+        <section id="empresa" class="row g-4 mb-5">
             <div class="col-md-6">
-                <div class="card h-100 p-4 shadow-sm">
-                    <h4 class="text-primary border-bottom pb-2"><i class="bi bi-building me-2"></i>Quiénes Somos</h4>
-                    <p>Somos una empresa líder dedicada a ofrecer los mejores materiales para la construcción pesada y acabados finos, con años de experiencia en el mercado ecuatoriano.</p>
-                    <p>Brindamos productos de la más alta calidad garantizada para todo tipo de obras residenciales, comerciales e industriales en la región amazónica y a nivel nacional.</p>
-                    <img src="static/img/ferreteria.jpg" alt="Ferretería El Tornillo Dorado" class="img-fluid rounded mt-2 shadow-sm">
+                <div class="card h-100 p-4 shadow-sm border">
+                    <h4 class="border-bottom pb-2 mb-3"><i class="bi bi-building text-primary me-2"></i>Quiénes Somos</h4>
+                    <p class="text-muted">Somos una empresa líder dedicada a ofrecer los mejores materiales para la construcción pesada y acabados finos, con años de experiencia en el mercado ecuatoriano.</p>
+                    <p class="text-muted">Brindamos productos de la más alta calidad garantizada para todo tipo de obras residenciales, comerciales e industriales en la región amazónica y a nivel nacional.</p>
+                    <img src="static/img/ferreteria.jpg" alt="Ferretería El Tornillo Dorado" class="img-fluid rounded-3 mt-2 shadow-sm">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card h-100 p-4 shadow-sm">
-                    <h4 class="text-primary border-bottom pb-2"><i class="bi bi-info-circle me-2"></i>Información Corporativa</h4>
+                <div class="card h-100 p-4 shadow-sm border">
+                    <h4 class="border-bottom pb-2 mb-3"><i class="bi bi-info-circle text-primary me-2"></i>Información Corporativa</h4>
                     <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item px-0"><strong><i class="bi bi-briefcase text-primary me-2"></i>Empresa:</strong> Ferretería El Tornillo Dorado</li>
-                        <li class="list-group-item px-0"><strong><i class="bi bi-person-circle text-primary me-2"></i>Estudiante:</strong> Clara Anahi Gonzalez Apolo</li>
-                        <li class="list-group-item px-0"><strong><i class="bi bi-book text-primary me-2"></i>Asignatura:</strong> Desarrollo de Aplicaciones Web (2626-UEA-L-UFPTI-004-D)</li>
-                        <li class="list-group-item px-0"><strong><i class="bi bi-geo-alt text-primary me-2"></i>Sucursal:</strong> Terminal Terrestre de Puyo</li>
+                        <li class="list-group-item px-0 bg-transparent"><strong><i class="bi bi-briefcase text-primary me-2"></i>Empresa:</strong> Ferretería El Tornillo Dorado</li>
+                        <li class="list-group-item px-0 bg-transparent"><strong><i class="bi bi-person-circle text-primary me-2"></i>Estudiante:</strong> Clara Anahi Gonzalez Apolo</li>
+                        <li class="list-group-item px-0 bg-transparent"><strong><i class="bi bi-book text-primary me-2"></i>Asignatura:</strong> Desarrollo de Aplicaciones Web (2626-UEA-L-UFPTI-004-D)</li>
+                        <li class="list-group-item px-0 bg-transparent"><strong><i class="bi bi-geo-alt text-primary me-2"></i>Sucursal:</strong> Terminal Terrestre de Puyo</li>
                     </ul>
                 </div>
             </div>
@@ -366,19 +384,19 @@
 
     </main>
 
-    <!-- Pie de página -->
-    <footer class="footer bg-dark text-white py-4 mt-auto border-top border-secondary">
+    <!-- Pie de página Pastel -->
+    <footer class="footer mt-auto">
         <div class="container text-center">
             <div class="row align-items-center">
                 <div class="col-md-6 text-md-start mb-2 mb-md-0">
-                    <h6 class="text-uppercase fw-bold mb-1"><i class="bi bi-tools text-primary me-2"></i>Ferretería El Tornillo Dorado</h6>
-                    <small class="text-white-50">Sistema de Gestión Web con Flask, MySQL y Flask-Login</small>
+                    <h6 class="fw-bold mb-1 text-dark"><i class="bi bi-tools text-primary me-2"></i>Ferretería El Tornillo Dorado</h6>
+                    <small class="text-muted">Sistema de Gestión Web con Flask, MySQL y Flask-Login</small>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <small class="text-white-50">Desarrollado por: <strong>Clara Anahí González Apolo</strong> (Semana 14)</small>
+                    <small class="text-muted">Desarrollado por: <strong>Clara Anahí González Apolo</strong> (Semana 14)</small>
                 </div>
             </div>
-            <hr class="border-secondary my-3">
+            <hr class="my-3">
             <small class="text-muted">&copy; 2026 Ferretería El Tornillo Dorado. Todos los derechos reservados.</small>
         </div>
     </footer>

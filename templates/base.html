@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ sistema.empresa }}{% endblock %}</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Estilos personalizados -->
+    <!-- Estilos personalizados Pastel UI/UX -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-    <!-- Inclusion del componente Navbar -->
+    <!-- Inclusión del componente Navbar -->
     {% include "components/navbar.html" %}
 
-    <!-- Encabezado Hero -->
+    <!-- Encabezado Hero Suave -->
     <header class="hero-header text-center">
         <div class="container">
             <h1 class="display-5 fw-bold">{{ sistema.empresa|upper }}</h1>
             <p class="lead mb-0">Sistema de Gestión de Materiales y Servicios de Construcción</p>
-            <span class="badge bg-light text-primary mt-2">Avance 14/16 - Sistema de Autenticación Funcional (Flask-Login & MySQL)</span>
+            <div class="mt-2">
+                <span class="badge bg-primary">
+                    <i class="bi bi-shield-check me-1"></i>Avance 14/16 - Autenticación y Sesiones Seguras (Flask-Login & MySQL)
+                </span>
+            </div>
         </div>
     </header>
 
@@ -32,9 +40,9 @@
                 <div class="row">
                     <div class="col-12">
                         {% for category, message in messages %}
-                            <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show shadow-sm" role="alert">
+                            <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show" role="alert">
                                 <i class="bi {% if category == 'success' %}bi-check-circle-fill text-success{% elif category in ['danger', 'error'] %}bi-exclamation-triangle-fill text-danger{% elif category == 'warning' %}bi-exclamation-circle-fill text-warning{% else %}bi-info-circle-fill text-info{% endif %} me-2"></i>
-                                <strong>{{ message }}</strong>
+                                <span>{{ message }}</span>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
                             </div>
                         {% endfor %}
@@ -50,7 +58,7 @@
         {% endblock %}
     </main>
 
-    <!-- Inclusion del componente Footer -->
+    <!-- Inclusión del componente Footer -->
     {% include "components/footer.html" %}
 
     <!-- Bootstrap 5 JS Bundle -->

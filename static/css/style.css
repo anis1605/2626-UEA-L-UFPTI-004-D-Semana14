@@ -1,115 +1,594 @@
-/* Estilos para Ferretería El Constructor - Avance 11/16 */
+/* ==============================================================================
+   FERRETERÍA EL TORNILLO DORADO - SISTEMA DE DISEÑO UI/UX PASTEL PROFESIONAL
+   Diseño suave, moderno, limpio y amigable para entornos SaaS y de Gestión
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --primary-color: #0d6efd;
-    --secondary-color: #0b5ed7;
-    --accent-color: #198754;
-    --dark-bg: #1e293b;
-    --light-bg: #f8fafc;
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Paleta Pastel Profesional */
+    --pastel-indigo: #6366f1;
+    --pastel-indigo-light: #eef2ff;
+    --pastel-indigo-border: #c7d2fe;
+    --pastel-indigo-text: #3730a3;
+
+    --pastel-teal: #0d9488;
+    --pastel-teal-light: #f0fdfa;
+    --pastel-teal-border: #99f6e4;
+    --pastel-teal-text: #115e59;
+
+    --pastel-mint: #10b981;
+    --pastel-mint-light: #ecfdf5;
+    --pastel-mint-border: #a7f3d0;
+    --pastel-mint-text: #065f46;
+
+    --pastel-peach: #f97316;
+    --pastel-peach-light: #fff7ed;
+    --pastel-peach-border: #ffedd5;
+    --pastel-peach-text: #9a3412;
+
+    --pastel-amber: #f59e0b;
+    --pastel-amber-light: #fffbeb;
+    --pastel-amber-border: #fde68a;
+    --pastel-amber-text: #92400e;
+
+    --pastel-rose: #f43f5e;
+    --pastel-rose-light: #fff1f2;
+    --pastel-rose-border: #fecdd3;
+    --pastel-rose-text: #9f1239;
+
+    --pastel-sky: #0284c7;
+    --pastel-sky-light: #f0f9ff;
+    --pastel-sky-border: #bae6fd;
+    --pastel-sky-text: #0369a1;
+
+    --pastel-lavender: #8b5cf6;
+    --pastel-lavender-light: #f5f3ff;
+    --pastel-lavender-border: #ddd6fe;
+    --pastel-lavender-text: #5b21b6;
+
+    /* Fondos y Neutros */
+    --bg-canvas: #f8fafc;
+    --bg-card: #ffffff;
+    --text-heading: #0f172a;
+    --text-body: #334155;
+    --text-muted: #64748b;
+    --border-soft: #e2e8f0;
+    --border-light: #f1f5f9;
+
+    /* Sombras Difusas Suaves */
+    --shadow-sm: 0 2px 4px rgba(148, 163, 184, 0.08);
+    --shadow-md: 0 6px 18px -2px rgba(148, 163, 184, 0.12), 0 2px 6px -1px rgba(148, 163, 184, 0.06);
+    --shadow-lg: 0 12px 28px -4px rgba(148, 163, 184, 0.15), 0 4px 10px -2px rgba(148, 163, 184, 0.08);
+    --shadow-pill: 0 4px 12px rgba(99, 102, 241, 0.12);
+
+    /* Radios Suaves */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
 }
 
+/* ==============================================================================
+   RESET Y TIPOGRAFÍA
+   ============================================================================== */
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: var(--light-bg);
-    color: #334155;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-body);
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
     flex: 1 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+}
+
+/* ==============================================================================
+   BARRA DE NAVEGACIÓN FROSTED PASTEL
+   ============================================================================== */
+.navbar {
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-soft) !important;
+    padding: 0.85rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--pastel-indigo-text) !important;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    color: var(--pastel-indigo);
+    background: var(--pastel-indigo-light);
+    padding: 0.4rem 0.55rem;
+    border-radius: var(--radius-sm);
+    margin-right: 0.5rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--text-muted) !important;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: var(--radius-full);
+    transition: all 0.2s ease;
+    font-size: 0.92rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--pastel-indigo) !important;
+    background-color: var(--pastel-indigo-light);
+}
+
+.dropdown-menu {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    font-weight: 500;
+    color: var(--text-body);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.85rem;
+    transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--pastel-indigo-light);
+    color: var(--pastel-indigo-text);
+}
+
+.dropdown-divider {
+    border-color: var(--border-light);
+}
+
+/* ==============================================================================
+   HERO HEADER SUAVE Y AIROSO
+   ============================================================================== */
 .hero-header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #0d6efd 100%);
-    color: #ffffff;
-    padding: 3rem 1rem;
-    border-radius: 0 0 1.25rem 1.25rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
+    background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+    color: var(--text-heading);
+    padding: 3rem 1.5rem 2.8rem;
+    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 2.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(199, 210, 254, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .hero-header h1 {
     font-weight: 800;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
+    color: #1e1b4b;
+    margin-bottom: 0.4rem;
 }
 
-.navbar-brand {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.nav-link {
+.hero-header p.lead {
+    color: #475569;
     font-weight: 500;
-    transition: color 0.2s ease-in-out;
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
+.hero-header .badge {
+    box-shadow: var(--shadow-sm);
+    padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.88rem;
+    background-color: #ffffff !important;
+    color: var(--pastel-indigo-text) !important;
+    border: 1px solid var(--pastel-indigo-border);
+}
+
+/* ==============================================================================
+   TARJETAS Y CONTENEDORES (CARD DESIGN)
+   ============================================================================== */
 .card {
-    border: none;
-    border-radius: 0.85rem;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-lg);
 }
 
-.table-responsive {
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
+.card-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.25rem 1.5rem;
+    font-weight: 700;
 }
 
-.table th {
-    background-color: #1e293b;
+.card-footer {
+    background: #f8fafc;
+    border-top: 1px solid var(--border-light);
+    padding: 1rem 1.5rem;
+}
+
+/* ==============================================================================
+   TARJETAS DE MÉTRICAS PASTEL
+   ============================================================================== */
+.metric-card-indigo {
+    background: linear-gradient(145deg, #ffffff 0%, #eef2ff 100%) !important;
+    border: 1px solid var(--pastel-indigo-border) !important;
+    color: var(--text-heading) !important;
+}
+.metric-card-indigo .metric-icon {
+    background: #ffffff;
+    color: var(--pastel-indigo);
+    box-shadow: var(--shadow-sm);
+}
+
+.metric-card-mint {
+    background: linear-gradient(145deg, #ffffff 0%, #ecfdf5 100%) !important;
+    border: 1px solid var(--pastel-mint-border) !important;
+    color: var(--text-heading) !important;
+}
+.metric-card-mint .metric-icon {
+    background: #ffffff;
+    color: var(--pastel-mint);
+    box-shadow: var(--shadow-sm);
+}
+
+.metric-card-amber {
+    background: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%) !important;
+    border: 1px solid var(--pastel-amber-border) !important;
+    color: var(--text-heading) !important;
+}
+.metric-card-amber .metric-icon {
+    background: #ffffff;
+    color: var(--pastel-amber);
+    box-shadow: var(--shadow-sm);
+}
+
+.metric-card-sky {
+    background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%) !important;
+    border: 1px solid var(--pastel-sky-border) !important;
+    color: var(--text-heading) !important;
+}
+.metric-card-sky .metric-icon {
+    background: #ffffff;
+    color: var(--pastel-sky);
+    box-shadow: var(--shadow-sm);
+}
+
+.metric-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* ==============================================================================
+   BOTONES PASTEL CON MICROMOVIMIENTO
+   ============================================================================== */
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    padding: 0.55rem 1.25rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: -0.01em;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border: none;
     color: #ffffff;
-    vertical-align: middle;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
 }
 
-/* Estilos para formularios y validación WTForms */
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+    color: #ffffff;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+    color: #ffffff;
+}
+
+.btn-outline-primary {
+    color: var(--pastel-indigo);
+    border: 1.5px solid var(--pastel-indigo-border);
+    background-color: #ffffff;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--pastel-indigo-light);
+    border-color: var(--pastel-indigo);
+    color: var(--pastel-indigo-text);
+    transform: translateY(-1px);
+}
+
+.btn-outline-danger {
+    color: var(--pastel-rose);
+    border: 1.5px solid var(--pastel-rose-border);
+    background-color: #ffffff;
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--pastel-rose-light);
+    border-color: var(--pastel-rose);
+    color: var(--pastel-rose-text);
+    transform: translateY(-1px);
+}
+
+.btn-outline-light {
+    color: var(--text-body);
+    border: 1.5px solid var(--border-soft);
+    background: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background: var(--bg-canvas);
+    color: var(--text-heading);
+    border-color: #cbd5e1;
+}
+
+/* ==============================================================================
+   BADGES PASTEL SUAVES
+   ============================================================================== */
+.badge {
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
+}
+
+.badge.bg-primary {
+    background-color: var(--pastel-indigo-light) !important;
+    color: var(--pastel-indigo-text) !important;
+    border: 1px solid var(--pastel-indigo-border);
+}
+
+.badge.bg-success {
+    background-color: var(--pastel-mint-light) !important;
+    color: var(--pastel-mint-text) !important;
+    border: 1px solid var(--pastel-mint-border);
+}
+
+.badge.bg-warning {
+    background-color: var(--pastel-amber-light) !important;
+    color: var(--pastel-amber-text) !important;
+    border: 1px solid var(--pastel-amber-border);
+}
+
+.badge.bg-danger {
+    background-color: var(--pastel-rose-light) !important;
+    color: var(--pastel-rose-text) !important;
+    border: 1px solid var(--pastel-rose-border);
+}
+
+.badge.bg-info {
+    background-color: var(--pastel-sky-light) !important;
+    color: var(--pastel-sky-text) !important;
+    border: 1px solid var(--pastel-sky-border);
+}
+
+.badge.bg-secondary {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0;
+}
+
+/* ==============================================================================
+   TABLAS LIMPIAS Y SUAVES
+   ============================================================================== */
+.table-responsive {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-soft);
+    background: #ffffff;
+    box-shadow: var(--shadow-sm);
+}
+
+.table {
+    margin-bottom: 0;
+    font-size: 0.93rem;
+}
+
+.table thead th, thead.table-dark th {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.95rem 1rem;
+    border-bottom: 1.5px solid var(--border-soft) !important;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+
+.table tbody td {
+    padding: 0.95rem 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-body);
+}
+
+/* ==============================================================================
+   FORMULARIOS Y CAMPOS WTFORMS
+   ============================================================================== */
 .form-label {
-    margin-bottom: 0.35rem;
-    color: #1e293b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-heading);
+    margin-bottom: 0.4rem;
+}
+
+.form-control, .form-select {
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--border-soft);
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    color: var(--text-body);
+    background-color: #ffffff;
+    transition: all 0.2s ease;
 }
 
 .form-control:focus, .form-select:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+    border-color: var(--pastel-indigo);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    outline: none;
 }
 
-.invalid-feedback {
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-top: 0.3rem;
+.input-group-text {
+    background-color: #f8fafc;
+    border: 1.5px solid var(--border-soft);
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    color: var(--text-muted);
+}
+
+.input-group .form-control {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
 
 .is-invalid {
-    border-color: #dc3545 !important;
-    background-color: #fff8f8;
+    border-color: var(--pastel-rose) !important;
+    background-color: var(--pastel-rose-light) !important;
 }
 
-/* Pie de página */
-footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    padding: 2.5rem 0 1.5rem 0;
-    margin-top: 3.5rem;
-    border-top: 4px solid var(--primary-color);
+.is-invalid:focus {
+    box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.15) !important;
 }
 
-footer a {
-    color: #38bdf8;
-    text-decoration: none;
+/* ==============================================================================
+   ALERTAS FLASH PASTEL
+   ============================================================================== */
+.alert {
+    border-radius: var(--radius-md);
+    padding: 0.9rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.92rem;
+    box-shadow: var(--shadow-sm);
+    border-width: 1px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.alert-success {
+    background-color: var(--pastel-mint-light);
+    border-color: var(--pastel-mint-border);
+    color: var(--pastel-mint-text);
 }
 
-.badge {
-    font-weight: 600;
-    letter-spacing: 0.3px;
+.alert-danger {
+    background-color: var(--pastel-rose-light);
+    border-color: var(--pastel-rose-border);
+    color: var(--pastel-rose-text);
+}
+
+.alert-warning {
+    background-color: var(--pastel-amber-light);
+    border-color: var(--pastel-amber-border);
+    color: var(--pastel-amber-text);
+}
+
+.alert-info {
+    background-color: var(--pastel-sky-light);
+    border-color: var(--pastel-sky-border);
+    color: var(--pastel-sky-text);
+}
+
+/* ==============================================================================
+   PIE DE PÁGINA (FOOTER)
+   ============================================================================== */
+footer.footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+}
+
+footer.footer h5, footer.footer h6 {
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+footer.footer p, footer.footer small {
+    color: var(--text-muted);
+}
+
+footer.footer hr {
+    border-color: var(--border-light);
+}
+
+/* ==============================================================================
+   ANIMACIONES SUAVES Y MICROMOVIMIENTOS
+   ============================================================================== */
+@keyframes fadeInSoft {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .table-responsive, .hero-header {
+    animation: fadeInSoft 0.35s ease-out;
 }
