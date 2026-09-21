@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Registrar Usuario | {{ sistema.empresa }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center py-4">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+            <div class="card-header bg-dark text-white text-center py-4 border-0">
+                <div class="d-inline-flex p-3 rounded-circle bg-success bg-opacity-25 text-success mb-2">
+                    <i class="bi bi-person-plus-fill fs-2"></i>
+                </div>
+                <h3 class="fw-bold mb-1">Registro de Nuevo Usuario</h3>
+                <p class="text-white-50 small mb-0">Complete la información para dar de alta su cuenta en el sistema</p>
+            </div>
+
+            <div class="card-body p-4 p-md-5 bg-white">
+                <form method="POST" action="{{ url_for('registro') }}" novalidate>
+                    {{ form.hidden_tag() }}
+
+                    <!-- Campo Usuario -->
+                    <div class="mb-3">
+                        <label for="{{ form.usuario.id }}" class="form-label fw-semibold">
+                            <i class="bi bi-person-badge text-primary me-1"></i>{{ form.usuario.label.text }}
+                        </label>
+                        {{ form.usuario(class="form-control" + (" is-invalid" if form.usuario.errors else "")) }}
+                        <div class="form-text text-muted small">Identificador único con el que iniciará sesión.</div>
+                        {% if form.usuario.errors %}
+                            <div class="text-danger small mt-1">
+                                {% for error in form.usuario.errors %}
+                                    <div><i class="bi bi-exclamation-circle me-1"></i>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo Nombre Completo -->
+                    <div class="mb-3">
+                        <label for="{{ form.nombre.id }}" class="form-label fw-semibold">
+                            <i class="bi bi-person text-primary me-1"></i>{{ form.nombre.label.text }}
+                        </label>
+                        {{ form.nombre(class="form-control" + (" is-invalid" if form.nombre.errors else "")) }}
+                        {% if form.nombre.errors %}
+                            <div class="text-danger small mt-1">
+                                {% for error in form.nombre.errors %}
+                                    <div><i class="bi bi-exclamation-circle me-1"></i>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo Rol -->
+                    <div class="mb-3">
+                        <label for="{{ form.rol.id }}" class="form-label fw-semibold">
+                            <i class="bi bi-shield-check text-primary me-1"></i>{{ form.rol.label.text }}
+                        </label>
+                        {{ form.rol(class="form-select" + (" is-invalid" if form.rol.errors else "")) }}
+                        {% if form.rol.errors %}
+                            <div class="text-danger small mt-1">
+                                {% for error in form.rol.errors %}
+                                    <div><i class="bi bi-exclamation-circle me-1"></i>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo Contraseña -->
+                    <div class="mb-3">
+                        <label for="{{ form.password.id }}" class="form-label fw-semibold">
+                            <i class="bi bi-lock text-primary me-1"></i>{{ form.password.label.text }}
+                        </label>
+                        {{ form.password(class="form-control" + (" is-invalid" if form.password.errors else "")) }}
+                        {% if form.password.errors %}
+                            <div class="text-danger small mt-1">
+                                {% for error in form.password.errors %}
+                                    <div><i class="bi bi-exclamation-circle me-1"></i>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Confirmar Contraseña -->
+                    <div class="mb-4">
+                        <label for="{{ form.confirm_password.id }}" class="form-label fw-semibold">
+                            <i class="bi bi-check2-circle text-primary me-1"></i>{{ form.confirm_password.label.text }}
+                        </label>
+                        {{ form.confirm_password(class="form-control" + (" is-invalid" if form.confirm_password.errors else "")) }}
+                        {% if form.confirm_password.errors %}
+                            <div class="text-danger small mt-1">
+                                {% for error in form.confirm_password.errors %}
+                                    <div><i class="bi bi-exclamation-circle me-1"></i>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Aviso de Seguridad -->
+                    <div class="alert alert-info py-2 px-3 small mb-4">
+                        <i class="bi bi-shield-lock me-1"></i>
+                        <strong>Seguridad:</strong> La contraseña será protegida mediante algoritmo criptográfico hash (scrypt) antes de insertarse en MySQL.
+                    </div>
+
+                    <!-- Botón de Envío -->
+                    <div class="d-grid mb-3">
+                        {{ form.submit(class="btn btn-success btn-lg fw-bold shadow-sm") }}
+                    </div>
+
+                    <div class="text-center mt-3 pt-3 border-top">
+                        <p class="text-muted small mb-0">
+                            ¿Ya dispone de una cuenta autorizada? 
+                            <a href="{{ url_for('login') }}" class="text-primary fw-bold text-decoration-none">
+                                Inicie sesión aquí
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
